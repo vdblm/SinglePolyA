@@ -1,0 +1,2 @@
+samtools view -H file.bam > header.sam
+samtools view file.bam | grep "XT:A:U" | cat header.sam - | samtools view -Sb - > file.unique.bam
